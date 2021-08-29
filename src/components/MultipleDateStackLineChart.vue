@@ -1,5 +1,5 @@
 <template>
-  <v-chart class="charBox" :option="option" />
+  <v-chart class="charBox" :option="option" :autoresize="true" />
 </template>
 
 <script>

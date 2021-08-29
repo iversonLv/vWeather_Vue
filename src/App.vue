@@ -42,7 +42,11 @@
         <DateRange />
       </el-card>
       <!-- loading -->
-      <Loading v-if="isLoading" :animated="true" :class="darkMode ? 'darkThemeSkeleton' : ''" />
+      <Loading
+        v-if="isLoading"
+        :animated="true"
+        :class="darkMode ? 'darkThemeSkeleton' : ''"
+      />
       <!-- single line chart -->
       <template v-if="weatherData && !isLoading">
         <SingleDayLineChart
@@ -99,12 +103,13 @@ export default {
   },
   setup() {
     // We need the date format strictly as 'yyyy-MM-dd' so for tricky
-    const currentDateYear = new Date().getFullYear();
+    const today = new Date();
+    const currentDateYear = today.getFullYear();
     const currentDateMonth =
       new Date().getMonth() + 1 < 10
-        ? "0" + (new Date().getMonth() + 1)
-        : new Date().getMonth() + 1;
-    const currentDateDate = new Date().getDate();
+        ? "0" + (today.getMonth() + 1)
+        : today.getMonth() + 1;
+    const currentDateDate = today.getDate();
     const currentDate = `${currentDateYear}-${currentDateMonth}-${currentDateDate}`;
 
     // darkmode state
