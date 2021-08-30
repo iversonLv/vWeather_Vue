@@ -316,6 +316,7 @@ li {
   .el-picker-panel__body {
     background-color: $--dark-color-bg !important;
     border-color: $--dark-color-bg;
+    color: $--dark-color-primary;
   }
 
   .el-divider {
