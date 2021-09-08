@@ -129,6 +129,12 @@ export default {
         type: "category",
         data: [...Array(24).keys()].map((i) => i + ":00"),
         boundaryGap: false,
+        nameTextStyle: {
+          color: modeColor
+        },
+        axisLabel: {
+          color: modeColor
+        },
         name: t("chart.Hour", {}, { locale: language.value }),
       },
       yAxis: {
@@ -136,6 +142,12 @@ export default {
         name: "℃",
         min: calGreatest(daysData, "min") - 1,
         max: calGreatest(daysData, "max") + 1,
+        nameTextStyle: {
+          color: modeColor
+        },
+        axisLabel: {
+          color: modeColor
+        },
       },
       tooltip: {
         trigger: "axis",
