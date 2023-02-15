@@ -13,8 +13,8 @@
         <!-- language select -->
         <LanguageToggle />
       </div>
-      <!-- header -->
 
+      <!-- header -->
       <Header />
       <el-card class="paper" :class="darkMode ? 'darkThemeCard' : ''">
         <!-- search are -->
