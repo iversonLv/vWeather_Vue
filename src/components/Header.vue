@@ -2,7 +2,7 @@
   <header>
     <h1 class="title">
       <!-- logo -->
-      <i class="el-icon-cloudy logo"></i>
+      <el-icon class="logo"><MostlyCloudy /></el-icon>
       <!-- title -->
       mWeather | Vue3
       <!-- location -->
@@ -21,6 +21,7 @@
 
 <script>
 import { inject } from "vue";
+import { MostlyCloudy } from "@element-plus/icons";
 
 export default {
   name: "Header",
@@ -33,6 +34,7 @@ export default {
       weatherData,
       isLoading,
       darkMode,
+      MostlyCloudy,
     };
   },
 };

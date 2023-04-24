@@ -22,7 +22,7 @@
           <el-input
             class="input"
             placeholder="Please input place"
-            prefix-icon="el-icon-search"
+            :prefix-icon="Search"
             v-model="place"
             @input="setPlace"
           >
@@ -37,7 +37,7 @@
             <template #content>
               <InfoToolTip />
             </template>
-            <i class="el-icon-warning-outline" style="cursor: pointer"></i>
+            <el-icon style="cursor: pointer"><Warning /></el-icon>
           </el-tooltip>
         </div>
         <DateRange />
@@ -88,6 +88,9 @@ import SingleDayLineChart from "./components/SingleDayLineChart";
 import MultipleDateStackLineChart from "./components/MultipleDateStackLineChart";
 import LightDarkMode from "./components/LightDarkMode";
 import LanguageToggle from "./components/LanguageToggle";
+
+// Icons
+import { Search, Warning } from "@element-plus/icons";
 
 export default {
   name: "App",
@@ -186,6 +189,8 @@ export default {
       locales,
       t,
       locale: language,
+      Search,
+      Warning,
     };
   },
 };
